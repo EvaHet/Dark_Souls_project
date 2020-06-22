@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>dz</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var doc = document.getElementById("btn");
+        doc.addEventListener("click", function(e) {
+          checkNameAndLoad(document.getElementById("name").value);
+      });
+    });
+
+    function checkNameAndLoad(name) {
+      ajax_get("data.json", function(list) {
+        list.Names.forEach( function(element, index) {
+          if(element.name == name) {
+            loadList(name);
+            return;
+          }
+        });
+      });
+    }
+
+    function loadList(name) {
+      ajax_get("datainfo.json", function(resumes) {
+        resumes.Info.forEach( function(element, index) {
+          if(element.id == name) {
+            var flex_container = document.getElementById("flex_container");
+            flex_container.innerHTML = '<div class="flex-item"><img src="images/'+ element.nickname +'_img.jpg" width="300" height="400" alt=""><div class="cont"><h1 class="title" id="name">'+ element.id +'</h1><div class="back"><p>' + element.description + '</p></div></div></div>';
+            return;
+          }
+        });
+      });
+    }
+
+    function ajax_get(url, callback) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+              // console.log('responseText:' + xmlhttp.responseText);
+              try {
+                var data = JSON.parse(xmlhttp.responseText);
+              } 
+              catch(err) {
+                console.log(err.message + " in " + xmlhttp.responseText);
+                return;
+              }
+              callback(data);
+        }
+        };
+ 
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    }
+    </script>
+  </head>
+  <body>
+  <header class="header">
+    <div class="searchinput">
+    <input type="search" id="name" class="search">
+    <button type="submit" id="btn" class="inputsearch">Find</button>
+    </div>
+    <div class="header-right">Dark Souls III</div>
+    <div class="header-bottom">Characters (Greirat, Karla, Yoel)</div>
+  </header>
+  <main class="main">
+    <div class="flex-container" id="flex_container">
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+  </footer>
+      </body>
+    </html>

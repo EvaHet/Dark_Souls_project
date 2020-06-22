@@ -1,0 +1,25 @@
+
+{ "Info": [ 
+	{
+		"id" : "Greirat",
+		"nickname" : "Greirat",
+		"description" : "Greirat of the Undead Settlement is a NPC in Dark Souls 3. Greirat will occasionally ask if he can go and 'find' items for you that he will then sell.Gives you the Blue Tearstone Ring and asks you to deliver it to Loretta in the Undead Settlement.Appears as a vendor with an expandable inventory during his questline."
+	},
+	{
+		"id" : "Karla",
+		"nickname" : "Karla",
+		"description" : "Karla is an NPC in Dark Souls 3.Teaches the player Dark Pyromancies, Sorceries and Miracles.Accepts Quelana Pyromancy Tome and the Grave Warden Pyromancy Tome, and hesitantly takes the Deep Braille Divine Tome and Londor Braille Divine Tome if the player asks her twice.Located in a locked cell on the ground floor of Irithyll Dungeon, next to the main Jailer group.The key to her cell is the Jailer's Key Ring and can be found in the Profaned Capital. Within the toxic swamp with the Sewer Centipedes, go up a ladder and stick to the left side of the roof until you come to some steps, follow the path and the key should be there."
+	},
+	{
+		"id" : "Yoel",
+		"nickname" : "Yoel",
+		"description" : "You must obtain this NPC before you kill the Abyss Watchers or else you will find him dead and therefore unable to bring him back to Firelink Shrine. On the same subject, he will also die in the Firelink Shrine after you kill the Abyss Watchers. To start his questline, select Draw Out True Strength from his dialogue a total of 5 times before you kill the Abyss Watchers and when he dies, Yuria of Londor will take his place.In the rare case that all stats are maxed out and you are fully levelled, you cannot Draw Out True Strength, therefore you cannot procceed with his questline, making it impossible to get Yuria to spawn."
+	},
+	{
+		"id" : "Yuria",
+		"nickname" : "Yuria",
+		"description" : "Yuria of Londor is an NPC in Dark Souls 3. A very mysterious character that appears after you find Yoel of Londor dead. She is a member of the Darkwraiths, with the primary goal of bringing about the Age of Dark. She is or was a maiden of the primordial serpent, Darkstalker Kaathe.Yuria is one of three sisters which founded the Sable Church of Londor. The youngest sister's name is Liliane and the eldest's name is Elfriede. Yuria can be met in the main game and Elfriede is found in the Ashes of Ariandel DLC. Liliane makes her sole appearance alongside Yuria in the cutscene for the 'Userpation of Fire' ending."
+	}
+
+  ]
+}
